@@ -27,7 +27,7 @@ if (word[4] == character):
     print(str(character) + " found at index 4")
     chrcount = chrcount + 1
 if (chrcount == 0):
-        print("No instances of " + character + " found in " + word)
+    print("No instances of " + character + " found in " + word)
 else:
     if (chrcount == 1):
         print(chrcount, "instance of " + character + " found in " + word)
