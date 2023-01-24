@@ -30,7 +30,7 @@ if(chrcount == 0):
     print("No instances of " + character + " found in "+ word)
 else:(chrcount != 0)
 if(chrcount == 1):
-    print( chrcount," intstance of " + character + " found in " + word)
+    print(chrcount,"intstance of " + character + " found in " + word)
 else:(chrcount != 1)
 if(chrcount>1):
-    print( chrcount," instances of " + character + " found in " + word)
+    print(chrcount,"instances of " + character + " found in " + word)
