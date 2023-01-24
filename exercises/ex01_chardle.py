@@ -6,7 +6,7 @@ if (len(word) != 5):
     print("Error: Word must contain 5 characters")
     exit()
 character: str = input("Enter a single character: ")
-if (len(character) !=1 ):
+if (len(character) != 1):
     print("Error: Character must be a single character.")
     exit()
 chrcount: int = 0
@@ -27,7 +27,7 @@ if (word[4] == character):
     print(str(character) + " found at index 4")
     chrcount = chrcount + 1
 if (chrcount == 0):
-    print("No instances of " + character + " found in "+ word)
+    print("No instances of " + character + " found in " + word)
 else: (chrcount != 0)
 if (chrcount == 1):
     print(chrcount, "instance of " + character + " found in " + word)
