@@ -1,4 +1,4 @@
-"""EX01 - One Shot Wordle - Just like Eminem... you only get one shot"""
+"""EX01 - One Shot Wordle - Just like Eminem... you only get one shot."""
 
 __author__ = "730481986"
 SECRET: str = "python"
@@ -20,27 +20,20 @@ if (len(guess) == secret_var):
         if (SECRET[idx_var] == guess[idx_var]):
             chr_emoji = chr_emoji + GREEN_BOX 
         if (SECRET[idx_var] != guess[idx_var]):
-            while (found_elsewhere == False) and alt_idx < secret_var:
+            while (found_elsewhere is False) and alt_idx < secret_var:
                 if (guess[idx_var] == SECRET[alt_idx]):
                     found_elsewhere = True 
                 if (guess[idx_var] != SECRET[alt_idx]):
                     alt_idx = alt_idx + 1
-            if (found_elsewhere == True):
+            if (found_elsewhere is True):
                 chr_emoji = chr_emoji + YELLOW_BOX
             else:
                 chr_emoji = chr_emoji + WHITE_BOX
         idx_var = idx_var + 1
     if (SECRET != guess):
-            print("Not quite. Play again soon!")
-            print(chr_emoji)
+        print("Not quite. Play again soon!")
+        print(chr_emoji)
     else:
-        if(SECRET == guess):
+        if (SECRET == guess):
             print("Woo! You got it!")
             print(chr_emoji)
-
-    
-
-
-
-
-
