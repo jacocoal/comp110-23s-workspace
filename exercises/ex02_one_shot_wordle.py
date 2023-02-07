@@ -15,29 +15,28 @@ while (len(guess) != secret_var):
     guess = input(f"That was not {secret_var} letters! Try again: ")
 if (len(guess) == secret_var):
     while idx_var < secret_var:
+        found_elsewhere = False
+        alt_idx = 0
         if (SECRET[idx_var] == guess[idx_var]):
-            chr_emoji = chr_emoji + GREEN_BOX + ""
+            chr_emoji = chr_emoji + GREEN_BOX 
         if (SECRET[idx_var] != guess[idx_var]):
-            while not(found_elsewhere == True) and alt_idx < idx_var:
+            while (found_elsewhere == False) and alt_idx < secret_var:
                 if (guess[idx_var] == SECRET[alt_idx]):
                     found_elsewhere = True 
                 if (guess[idx_var] != SECRET[alt_idx]):
                     alt_idx = alt_idx + 1
-            if (found_elsewhere is True):
-                chr_emoji = chr_emoji + YELLOW_BOX + ""
-            if (found_elsewhere is not True):
-                chr_emoji = chr_emoji + WHITE_BOX + ""
-            found_elsewhere = False 
+            if (found_elsewhere == True):
+                chr_emoji = chr_emoji + YELLOW_BOX
+            else:
+                chr_emoji = chr_emoji + WHITE_BOX
         idx_var = idx_var + 1
     if (SECRET != guess):
             print("Not quite. Play again soon!")
             print(chr_emoji)
-            exit()
     else:
         if(SECRET == guess):
             print("Woo! You got it!")
             print(chr_emoji)
-            exit()
 
     
 
