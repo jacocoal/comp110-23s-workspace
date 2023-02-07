@@ -23,9 +23,9 @@ if (len(guess) == secret_var):
                     found_elsewhere = True 
                 if (guess[idx_var] != SECRET[alt_idx]):
                     alt_idx = alt_idx + 1
-            if (found_elsewhere == True):
+            if (found_elsewhere is True):
                 chr_emoji = chr_emoji + YELLOW_BOX + ""
-            if (found_elsewhere != True):
+            if (found_elsewhere is not True):
                 chr_emoji = chr_emoji + WHITE_BOX + ""
             found_elsewhere = False 
         idx_var = idx_var + 1
