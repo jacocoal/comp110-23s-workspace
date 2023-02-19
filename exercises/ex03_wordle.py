@@ -31,3 +31,25 @@ def emojified(guess = str, secret = str) -> str:
                 emoji_string = emoji_string + YELLOW_BOX
         chr_idx = chr_idx + 1
     return emoji_string
+
+def input_guess(word_length = int) -> str:
+    """Makes sure that the input matches the correct word length specified"""
+    guess: str = input(f"Enter a {word_length} character word: ")
+    while len(guess) != word_length:
+        guess: str = input(f"That wasn't {word_length} chars! Try again: ")
+    if len(guess) == word_length:
+        return guess
+
+def main() -> None:
+    """The entry point of the program and main game loop."""
+    user_turns: int = 1
+    SECRET_WORD: str = "codes"
+    while user_turns <= 6:
+        print(f"=== Turn {user_turns}/6 ===")
+        guess: str = input_guess(len(SECRET_WORD))
+        print(emojified(guess, SECRET_WORD))
+        if guess == SECRET_WORD:
+            return print(f"You won in {user_turns}/6 turns!")
+        else:
+            user_turns = user_turns + 1
+    return print("X/6 - Sorry, try again tomorrow!")
