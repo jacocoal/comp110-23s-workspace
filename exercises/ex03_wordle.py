@@ -1,7 +1,7 @@
 """EX03 - Wordle - This time it's the real deal"""
 
 __author__ = "730481986"
-def contains_char(whole_string = str, single_string = str) -> bool:
+def contains_char(whole_string:str, single_string:str) -> bool:
     """Determines whether or not a character is found in a string"""
     assert len(single_string) == 1
     chr_idx : int = 0
@@ -13,7 +13,7 @@ def contains_char(whole_string = str, single_string = str) -> bool:
             if chr_idx == (len(whole_string)):
                 return False
 
-def emojified(guess = str, secret = str) -> str:
+def emojified(guess:str, secret:str) -> str:
     """Returns the wordle emojis that indicate where certain letters are in the secret word"""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
@@ -32,11 +32,11 @@ def emojified(guess = str, secret = str) -> str:
         chr_idx = chr_idx + 1
     return emoji_string
 
-def input_guess(word_length = int) -> str:
+def input_guess(word_length:int) -> str:
     """Makes sure that the input matches the correct word length specified"""
     guess: str = input(f"Enter a {word_length} character word: ")
     while len(guess) != word_length:
-        guess: str = input(f"That wasn't {word_length} chars! Try again: ")
+        guess = input(f"That wasn't {word_length} chars! Try again: ")
     if len(guess) == word_length:
         return guess
 
