@@ -12,6 +12,7 @@ def contains_char(whole_string:str, single_string:str) -> bool:
             chr_idx = chr_idx + 1
             if chr_idx == (len(whole_string)):
                 return False
+    return ()
 
 def emojified(guess:str, secret:str) -> str:
     """Returns the wordle emojis that indicate where certain letters are in the secret word"""
@@ -39,6 +40,7 @@ def input_guess(word_length:int) -> str:
         guess = input(f"That wasn't {word_length} chars! Try again: ")
     if len(guess) == word_length:
         return guess
+    return ()
 
 def main() -> None:
     """The entry point of the program and main game loop."""
