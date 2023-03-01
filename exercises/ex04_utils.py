@@ -3,7 +3,7 @@
 __author__ = "730481986"
 
 
-def all(int_list: list[int], single_int:int) -> bool:
+def all(int_list: list[int], single_int: int) -> bool:
     """Returns true if the single integer is found within the list and false if it is not."""
     list_length: int = len(int_list)
     idx: int = 0
