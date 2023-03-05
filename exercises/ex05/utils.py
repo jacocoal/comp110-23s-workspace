@@ -11,6 +11,7 @@ def only_evens(int_list: list[int]) -> list[int]:
             evens_list.append(item)
     return evens_list
 
+
 def concat(int_list1: list[int], int_list2: list[int]) -> list[int]:
     """Returns a combination of the first list followed by the second list."""
     comb_list: list[int] = list()
@@ -19,6 +20,7 @@ def concat(int_list1: list[int], int_list2: list[int]) -> list[int]:
     for item2 in int_list2:
         comb_list.append(item2)
     return comb_list
+
 
 def sub(int_list: list[int], start_idx: int, end_idx: int) -> list[int]:
     """Returns a subset of the given list that falls between the start index and the end index. """
