@@ -16,20 +16,20 @@ def test_empty() -> None:
     test_list: list[int] = list()
     assert only_evens(test_list) == []
 
-def test_many() -> None:
-    test_list: list[int] = [0, 1, 2, 3, 4, 5]
+def test_many_indexes() -> None:
+    test_list: list[int] = [0, 1, 2, 3, 4, 5, 6]
     test_start: int = 0
     test_end: int = 3
-    assert sub(test_list, test_start, test_end) == [0, 1, 2]
+    assert sub(test_list, test_start, test_end) == [0, 1, 2, 3]
 
 def test_negative() -> None:
-    test_list: list[int] = [-1, -2, 5, 100]
+    test_list: list[int] = [-1, -2, -3, 4]
     test_start: int = 1
-    test_end: int = 4
-    assert sub(test_list, test_start, test_end) == [-2, 5, 100]
+    test_end: int = 3
+    assert sub(test_list, test_start, test_end) == [-2, -3, 4]
 
-def test_wrong_range() -> None:
-    test_list: list[int] = [0,1,2]
+def test_wrong_idx() -> None:
+    test_list: list[int] = [1, 2, 3]
     test_start: int = 1
     test_end: int = 0
     assert sub(test_list, test_start, test_end) == []

@@ -24,7 +24,6 @@ def concat(int_list1: list[int], int_list2: list[int]) -> list[int]:
 
 def sub(int_list: list[int], start_idx: int, end_idx: int) -> list[int]:
     """Returns a subset of the given list that falls between the start index and the end index. """
-    end_idx = end_idx - 1
     sub_list: list[int] = list()
     if start_idx < 0:
         start_idx == 0
@@ -32,7 +31,7 @@ def sub(int_list: list[int], start_idx: int, end_idx: int) -> list[int]:
         end_idx == (len(int_list) - 1)
     if len(int_list) == 0 or start_idx >= len(int_list) or end_idx <= 0:
         return []
-    for idx in range(start_idx,end_idx + 1):
+    for idx in range(start_idx, end_idx + 1):
         sub_list.append(int_list[idx])
     return sub_list
 
