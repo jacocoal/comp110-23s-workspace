@@ -27,20 +27,20 @@ def main() -> None:
         return
     
 
-def greet() -> str:
+def greet() -> None:
     """Greets the player."""
     global player
     player = input("Welcome to One Round Knock-Out, the fast and furious punch out game!  Enter your name here: ")
     print(f"Welcome {player}!  The goal of this game is to knock out your opponent before they can do the same to you!  Each participant has 10 health, and can chose from a jab, hook, or uppercut.  Jabs land 75% of the time and do 1 damage, hooks 50% and 2 damage, and uppercuts 25% and 3 damage.")
-    return player
+    return
 
 
-def player_attack(attack_type = int) -> int:
+def player_attack(attack_type=int) -> int:
     """Tracks the player's attacks."""
     CLOWN_EMOJI: str = "\U0001F921"
     global opponent_hp
     global points
-    if attack_type == 1: #this is the jab
+    if attack_type == 1:  # jab
         if random_number() > 1:
             points = points + 1
             opponent_hp = opponent_hp - 1
@@ -48,7 +48,7 @@ def player_attack(attack_type = int) -> int:
         else:
             print(f"Miss!{CLOWN_EMOJI}")
             return
-    if attack_type == 2: #this is the hook
+    if attack_type == 2:  # hook
         if random_number() > 2:
             points += 2
             opponent_hp = opponent_hp - 2
@@ -56,7 +56,7 @@ def player_attack(attack_type = int) -> int:
         else:
             print(f"Miss!{CLOWN_EMOJI}")
             return
-    if attack_type == 3: #this is the uppercut
+    if attack_type == 3:  # uppercut
         if random_number() > 3:
             points += 3
             opponent_hp -= 3
@@ -84,8 +84,11 @@ def opponent_attack() -> None:
     
 
 def random_number() -> None:
+    """Creates a random number between 1 and 4 to fight."""
     import random
-    number: int = random.randint(1,4)
+    number: int = random.randint(1, 4)
     return number
 
-main()
+
+if __name__ == "__main__":
+    main()
