@@ -3,9 +3,9 @@
 __author__ = "730481986"
 
 
-def invert(dictionary: dict[str,str]) -> dict[str,str]:
+def invert(dictionary: dict[str, str]) -> dict[str, str]:
     """Flips values of a dictionary so that keys become values and values become keys."""
-    result: dict[str,str] = {}
+    result: dict[str, str] = {}
     new_key_list: list[str] = []
     old_key_list: list[str] = []
     x: int = 0
@@ -24,12 +24,12 @@ def invert(dictionary: dict[str,str]) -> dict[str,str]:
     return result
 
 
-def favorite_color(names_and_colors: dict[str,str]) -> str:
+def favorite_color(names_and_colors: dict[str, str]) -> str:
     """Returns the most common favorite color."""
     list_of_fav_colors: list[str] = []
     idx: int = 0
     check_idx: int = 0
-    tally: dict[str,int] = {}
+    tally: dict[str, int] = {}
     best: int = 0
     best_color: str = ""
     for key in names_and_colors:
@@ -50,9 +50,9 @@ def favorite_color(names_and_colors: dict[str,str]) -> str:
     return best_color
 
 
-def count(list1: list[str]) -> dict[str,int]:
+def count(list1: list[str]) -> dict[str, int]:
     """Returns how many times a number is found in a list."""
-    new_dict: dict[str,int] = {}
+    new_dict: dict[str, int] = {}
     for item in list1:
         if item in new_dict:
             new_dict[item] += 1
