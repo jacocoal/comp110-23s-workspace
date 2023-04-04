@@ -51,7 +51,9 @@ def head(dict1: dict[str, list[str]], number_of_rows: int) -> dict[str, list[str
                 head_list.append(dict1[key][idx])
                 idx += 1
                 head_dict[key] = head_list
-    return head_dict
+        return head_dict
+    else:
+        return head_dict
 
 
 def select(dict1: dict[str, list[str]], list1: list[str]) -> dict[str, list[str]]:
