@@ -51,6 +51,8 @@ def head(dict1: dict[str, list[str]], number_of_rows: int) -> dict[str, list[str
                 head_list.append(dict1[key][idx])
                 idx += 1
             head_dict[key] = head_list
+        else:
+            head_dict = {}
     return head_dict
 
 
