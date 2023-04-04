@@ -43,18 +43,14 @@ def columnar(table: list[dict[str,str]]) -> dict[str,list[str]]:
 def head(dict1: dict[str, list[str]], number_of_rows: int) -> dict[str, list[str]]:
     """Produces a new column-based table with only the first N rows of data for each column."""
     head_dict: dict[str, list[str]] = {}
-    if number_of_rows <= len(dict1.keys()) and number_of_rows > 0:
-        for key in dict1:
-            head_list: list[str] = []
-            idx: int = 0
-            while idx < number_of_rows:
-                head_list.append(dict1[key][idx])
-                idx += 1
-                head_dict[key] = head_list
-        return head_dict
-    else:
-        head_dict = {}
-        return head_dict
+    for key in dict1:
+        head_list: list[str] = []
+        idx: int = 0
+        while idx < number_of_rows:
+            head_list.append(dict1[key][idx])
+            idx += 1
+            head_dict[key] = head_list
+    return head_dict
 
 
 def select(dict1: dict[str, list[str]], list1: list[str]) -> dict[str, list[str]]:
