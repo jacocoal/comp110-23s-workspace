@@ -46,7 +46,7 @@ def head(dict1: dict[str, list[str]], number_of_rows: int) -> dict[str, list[str
     for key in dict1:
         head_list: list[str] = []
         idx: int = 0
-        if number_of_rows <= len(dict1):
+        if number_of_rows <= len(dict1.keys()):
             while idx < number_of_rows:
                 head_list.append(dict1[key][idx])
                 idx += 1
